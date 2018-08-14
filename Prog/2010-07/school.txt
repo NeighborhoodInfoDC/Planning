@@ -1,0 +1,58 @@
+PLANNING.TESTSCORES_CITY
+
+   DCPS_pct_prof_math_0607                    
+   DCPS_pct_prof_math_0708                    
+   DCPS_pct_prof_math_0809                    
+   DCPS_pct_prof_reading_0607                 
+   DCPS_pct_prof_reading_0708                 
+   DCPS_pct_prof_reading_0809                 
+   
+   PCSB_pct_prof_math_0607                    
+   PCSB_pct_prof_math_0708                    
+   PCSB_pct_prof_math_0809                    
+   PCSB_pct_prof_reading_0607                 
+   PCSB_pct_prof_reading_0708                 
+   PCSB_pct_prof_reading_0809                 
+                                 
+   city_pct_prof_math_0607                    
+   city_pct_prof_math_0708                    
+   city_pct_prof_math_0809                    
+   city_pct_prof_reading_0607                 
+   city_pct_prof_reading_0708                 
+   city_pct_prof_reading_0809    
+
+
+
+
+PLANNING.ENROLMENT_CITY
+   DCPS_total_rep_0102                               
+   DCPS_total_rep_0203                               
+   DCPS_total_rep_0304                               
+   DCPS_total_rep_0405                               
+   DCPS_total_rep_0506                               
+   DCPS_total_rep_0607                               
+   DCPS_total_rep_0708                               
+   DCPS_total_rep_0809                               
+   DCPS_total_rep_0910                               
+   
+   PCSB_total_rep_0102                               
+   PCSB_total_rep_0203                               
+   PCSB_total_rep_0304                               
+   PCSB_total_rep_0405                               
+   PCSB_total_rep_0506                               
+   PCSB_total_rep_0607                               
+   PCSB_total_rep_0708                               
+   PCSB_total_rep_0809                               
+   PCSB_total_rep_0910    
+   
+   allsch_rep_0102                                   
+   allsch_rep_0203                                   
+   allsch_rep_0304                                   
+   allsch_rep_0405                                   
+   allsch_rep_0506                                   
+   allsch_rep_0607                                   
+   allsch_rep_0708                                   
+   allsch_rep_0809                                   
+   allsch_rep_0910                                   
+                                            
+                                                           
