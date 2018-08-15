@@ -43,16 +43,14 @@ data Pop_forecast_r9_dc_taz10;
   
   label
     ACRES = "TAZ area in acres"
-    CNTY_FIPS = "County FIPS code"
-    EMP2010 = "Employed persons, 2010"
-    EMP2015 = "Employed persons, 2015"
-    EMP2020 = "Employed persons, 2020"
-    EMP2025 = "Employed persons, 2025"
-    EMP2030 = "Employed persons, 2030"
-    EMP2035 = "Employed persons, 2035"
-    EMP2040 = "Employed persons, 2040"
-    EMP2045 = "Employed persons, 2045"
-    FIPSSTCO = "State + county FIPS codes"
+    EMP2010 = "Jobs (by workplace location), 2010"
+    EMP2015 = "Jobs (by workplace location), 2015"
+    EMP2020 = "Jobs (by workplace location), 2020"
+    EMP2025 = "Jobs (by workplace location), 2025"
+    EMP2030 = "Jobs (by workplace location), 2030"
+    EMP2035 = "Jobs (by workplace location), 2035"
+    EMP2040 = "Jobs (by workplace location), 2040"
+    EMP2045 = "Jobs (by workplace location), 2045"
     GQ2010 = "Group quarters population, 2010"
     GQ2015 = "Group quarters population, 2015"
     GQ2020 = "Group quarters population, 2020"
@@ -77,19 +75,7 @@ data Pop_forecast_r9_dc_taz10;
     HHPOP2035 = "Population in households, 2035"
     HHPOP2040 = "Population in households, 2040"
     HHPOP2045 = "Population in households, 2045"
-    JUR
-    NAME
-    OBJECTID
-    OBJECTID_1
-    REGION
-    SQMI
-    STATE_FIPS
-    STATE_NAME
-    Shape_Area
-    Shape_Le_1
-    Shape_Leng
     TAZ = "Traffic analysis zone (2010)"
-    TAZ_1
     TPOP2010 = "Total population, 2010"
     TPOP2015 = "Total population, 2015"
     TPOP2020 = "Total population, 2020"
@@ -98,15 +84,28 @@ data Pop_forecast_r9_dc_taz10;
     TPOP2035 = "Total population, 2035"
     TPOP2040 = "Total population, 2040"
     TPOP2045 = "Total population, 2045"
-
-    Taz2010 = "Traffic analysis zone (2010): ssccczzz";
+    Taz2010 = "Traffic analysis zone (2010): ssccczzz"
+  ;
   
   drop 
-    
+    JUR NAME OBJECTID OBJECTID_1 REGION SQMI STATE_FIPS CNTY_FIPS FIPSSTCO
+    STATE_NAME Shape_Area Shape_Le_1 Shape_Leng TAZ_1
     emp10_15 emp10_15p gq10_15 gq10_15p hh10_15 hh10_15pct hpop10_15 hpop10_15p tpop10_15 tpop10_15p;
 
 run;
 
-%File_info( data=Pop_forecast_r9_dc_taz10, printobs=5 )
+%Finalize_data_set( 
+  /** Finalize data set parameters **/
+  data=Pop_forecast_r9_dc_taz10,
+  out=Pop_forecast_r9_dc_taz10,
+  outlib=Planning,
+  label="Population, household, and job forecasts, 2010-2045, DC, Traffic Analysis Zone (2010)",
+  sortby=taz2010,
+  /** Metadata parameters **/
+  restrictions=None,
+  revisions=%str(New file.),
+  /** File info parameters **/
+  printobs=5
+)
 
 run;
